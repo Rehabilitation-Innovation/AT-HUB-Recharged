@@ -1,0 +1,12 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "e5e777a1-51ad-4c01-8966-d58e6a592456")
+	(paper "A4")
+	(title_block
+		(title "AT-HUB-Recharged")
+		(rev "Rev.2")
+	)
+	(lib_symbols)
+)
