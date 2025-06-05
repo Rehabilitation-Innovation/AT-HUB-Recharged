@@ -1,0 +1,294 @@
+#include <Arduino.h>
+#include <BluetoothSerial.h>
+#define BTN1 22
+#define BTN2 19
+#define BTN3 8
+#define BTN4 0
+#define BTN5 4
+
+#define NUMBER_OF_BUTTONS 5
+
+#define BACKUP_BTN1 2
+#define BACKUP_BTN2 15
+#define BACKUP_BTN3 13
+#define BACKUP_BTN4 12
+#define BACKUP_BTN5 14
+#define LED1 27
+#define LED2 33
+#define LED3 32
+#define LED4 26
+#define LED5 25
+#define RELAY1 20
+#define RELAY2 21
+#define RELAY3 7
+#define RELAY4 5
+#define RELAY5 3
+
+#define DEBOUNCE_TIME 50
+#define DOUBLE_TAP_TIME 300
+#define HOLD_TIME 301
+
+#define BT_DISCOVER_TIME 10000
+
+#if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
+#error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
+#endif
+#if !defined(CONFIG_BT_SPP_ENABLED)
+#error Serial Bluetooth not available or not enabled. It is only available for the ESP32 chip.
+#endif
+
+struct ButtonStates
+{
+    int button_current_value = 0;
+    int button_last_value = HIGH;
+    unsigned long button_debounce_start = 0;
+    unsigned long button_single_tap_start_time = 0;
+    unsigned long button_last_press_time = 0;
+    bool button_pressed = false;
+    bool button_double_tap_detected = false;
+};
+
+ButtonStates button1;
+ButtonStates button2;
+ButtonStates button3;
+ButtonStates button4;
+ButtonStates button5;
+
+int bb1, bb2, bb3, bb4, bb5;
+BluetoothSerial SerialBT;
+static bool btScanAsync = true;
+static bool btScanSync = true;
+
+char Data[11];
+
+void checkButton(ButtonStates &button, int button_pin, int button_number)
+{
+    button.button_current_value = digitalRead(button_pin);
+    if (button.button_current_value == LOW && button.button_last_value == HIGH && (millis() - button.button_debounce_start) > DEBOUNCE_TIME)
+    {
+        button.button_debounce_start = millis();
+        button.button_last_press_time = millis();
+        button.button_pressed = true;
+        if ((millis() - button.button_single_tap_start_time) < DOUBLE_TAP_TIME)
+        {
+            button.button_double_tap_detected = true;
+        }
+        else
+        {
+            button.button_double_tap_detected = false;
+        }
+        button.button_single_tap_start_time = millis();
+    }
+
+    if (button.button_current_value == HIGH && button.button_last_value == LOW && (millis() - button.button_debounce_start) > DEBOUNCE_TIME)
+    {
+
+        button.button_debounce_start = millis();
+        if (button.button_double_tap_detected)
+        {
+            Serial.println("Button " + String(button_number) + " double tapped");
+            String double_tap_message = "DTB" + String(button_number);
+            SerialBT.print(double_tap_message.c_str());
+
+            button.button_double_tap_detected = false;
+            button.button_single_tap_start_time = 0;
+        }
+        else if ((millis() - button.button_last_press_time) < HOLD_TIME)
+        {
+            Serial.println("Button " + String(button_number) + " pressed");
+            String tap_message = "TB" + String(button_number);
+            SerialBT.print(tap_message.c_str()); // Convert String to C-string
+        }
+        else
+        {
+            Serial.println("Button " + String(button_number) + " letGO");
+            String hold_button_message = "LGB" + String(button_number);
+            SerialBT.print(hold_button_message.c_str()); // Convert String to C-string
+        }
+        button.button_pressed = false;
+    }
+
+    if (button.button_pressed && (millis() - button.button_last_press_time) >= HOLD_TIME)
+    {
+        Serial.println("Button " + String(button_number) + " held");
+        String hold_button_message = "HB" + String(button_number);
+        SerialBT.print(hold_button_message.c_str()); // Convert String to C-string
+
+        button.button_pressed = false;
+        button.button_single_tap_start_time = 0;
+        button.button_last_press_time = 0;
+    }
+
+    button.button_last_value = button.button_current_value;
+}
+
+void backUpButton(int backUp_button_Number, int button_number, int relay_Num, int led_Num, int bb_number)
+{
+    bb_number = digitalRead(backUp_button_Number);
+    if (bb_number == LOW)
+    {
+        Serial.println(String(button_number));
+        digitalWrite(relay_Num, HIGH);
+        digitalWrite(led_Num, HIGH);
+    }
+}
+
+void btAdvertisedDeviceFound(BTAdvertisedDevice *pDevice)
+{
+    Serial.printf("Found a device asynchronously: %s\n", pDevice->toString().c_str());
+}
+
+void setup()
+{
+    pinMode(RELAY1, OUTPUT);
+    pinMode(RELAY2, OUTPUT);
+    pinMode(RELAY3, OUTPUT);
+    pinMode(RELAY4, OUTPUT);
+    pinMode(RELAY5, OUTPUT);
+    pinMode(LED1, OUTPUT);
+    pinMode(LED2, OUTPUT);
+    pinMode(LED3, OUTPUT);
+    pinMode(LED4, OUTPUT);
+    pinMode(LED5, OUTPUT);
+    pinMode(BTN1, INPUT_PULLUP);
+    pinMode(BTN2, INPUT_PULLUP);
+    pinMode(BTN3, INPUT_PULLUP);
+    pinMode(BTN4, INPUT_PULLUP);
+    pinMode(BTN5, INPUT_PULLUP);
+    pinMode(BACKUP_BTN1, INPUT_PULLUP);
+    pinMode(BACKUP_BTN2, INPUT_PULLUP);
+    pinMode(BACKUP_BTN3, INPUT_PULLUP);
+    pinMode(BACKUP_BTN4, INPUT_PULLUP);
+    pinMode(BACKUP_BTN5, INPUT_PULLUP);
+    digitalWrite(RELAY1, LOW);
+    digitalWrite(RELAY2, LOW);
+    digitalWrite(RELAY3, LOW);
+    digitalWrite(RELAY4, LOW);
+    digitalWrite(RELAY5, LOW);
+    digitalWrite(LED1, LOW);
+    digitalWrite(LED2, LOW);
+    digitalWrite(LED3, LOW);
+    digitalWrite(LED4, LOW);
+    digitalWrite(LED5, LOW);
+    Serial.begin(115200);
+    SerialBT.begin("AT-HUB-1"); // Bluetooth device name
+    Serial.println("The device started, now you can pair it with bluetooth!");
+    if (btScanAsync)
+    {
+        Serial.print("Starting asynchronous discovery... ");
+        if (SerialBT.discoverAsync(btAdvertisedDeviceFound))
+        {
+            Serial.println("Findings will be reported in \"btAdvertisedDeviceFound\"");
+            delay(10000);
+            Serial.print("Stopping discoverAsync... ");
+            SerialBT.discoverAsyncStop();
+            Serial.println("stopped");
+        }
+        else
+        {
+            Serial.println("Error on discoverAsync f.e. not working after a \"connect\"");
+        }
+    }
+    if (btScanSync)
+    {
+        Serial.println("Starting synchronous discovery... ");
+        BTScanResults *pResults = SerialBT.discover(BT_DISCOVER_TIME);
+        if (pResults)
+        {
+            pResults->dump(&Serial);
+        }
+        else
+        {
+            Serial.println("Error on BT Scan, no result!");
+        }
+    }
+    delay(100);
+}
+
+void loop()
+{
+    checkButton(button1, BTN1, 1);
+    checkButton(button2, BTN2, 2);
+    checkButton(button3, BTN3, 3);
+    checkButton(button4, BTN4, 4);
+    checkButton(button5, BTN5, 5);
+
+    backUpButton(BACKUP_BTN1, 1, RELAY1, LED1, bb1);
+    backUpButton(BACKUP_BTN2, 2, RELAY2, LED2, bb2);
+    backUpButton(BACKUP_BTN3, 3, RELAY3, LED3, bb3);
+    backUpButton(BACKUP_BTN4, 4, RELAY4, LED4, bb4);
+    backUpButton(BACKUP_BTN5, 5, RELAY5, LED5, bb5);
+
+    if (bb1 == LOW || bb2 == LOW || bb3 == LOW || bb4 == LOW || bb5 == LOW || button1.button_current_value == LOW || button2.button_current_value == LOW || button3.button_current_value == LOW || button4.button_current_value == LOW || button5.button_current_value == LOW)
+    {
+        delay(20);
+        digitalWrite(RELAY1, LOW);
+        digitalWrite(LED1, LOW);
+        digitalWrite(RELAY2, LOW);
+        digitalWrite(LED2, LOW);
+        digitalWrite(RELAY3, LOW);
+        digitalWrite(LED3, LOW);
+        digitalWrite(RELAY4, LOW);
+        digitalWrite(LED4, LOW);
+        digitalWrite(RELAY5, LOW);
+        digitalWrite(LED5, LOW);
+    }
+
+    else
+    {
+        Data[0] = SerialBT.read();
+        Serial.println(Data[0]);
+        if (Data[0] == 0x30)
+        { // Command byte for relay control
+            while (SerialBT.available() == 0)
+            {
+            } // wait for next parameter.
+            Data[0] = SerialBT.read(); // the relay to turn on.
+            Serial.println(Data[0]);
+            if (Data[0] == '5')
+            {
+                digitalWrite(RELAY1, HIGH);
+                digitalWrite(LED1, HIGH);
+                delay(20);
+            }
+            else if (Data[0] == '4')
+            {
+                digitalWrite(RELAY2, HIGH);
+                digitalWrite(LED2, HIGH);
+                delay(20);
+            }
+            else if (Data[0] == '3')
+            {
+                digitalWrite(RELAY3, HIGH);
+                digitalWrite(LED3, HIGH);
+                delay(20);
+            }
+            else if (Data[0] == '2')
+            {
+                digitalWrite(RELAY4, HIGH);
+                digitalWrite(LED4, HIGH);
+                delay(20);
+            }
+            else if (Data[0] == 'N')
+            {
+                digitalWrite(RELAY5, HIGH);
+                digitalWrite(LED5, HIGH);
+                delay(20);
+            }
+            else if (Data[0] == 'F')
+            {
+                digitalWrite(RELAY1, LOW);
+                digitalWrite(LED1, LOW);
+                digitalWrite(RELAY2, LOW);
+                digitalWrite(LED2, LOW);
+                digitalWrite(RELAY3, LOW);
+                digitalWrite(LED3, LOW);
+                digitalWrite(RELAY4, LOW);
+                digitalWrite(LED4, LOW);
+                digitalWrite(RELAY5, LOW);
+                digitalWrite(LED5, LOW);
+            }
+        }
+        SerialBT.flush();
+    }
+}
