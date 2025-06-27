@@ -147,7 +147,7 @@
           "td_onpthpad": true,
           "td_onroundshapesonly": false,
           "td_onsmdpad": true,
-          "td_ontrackend": false,
+          "td_ontrackend": true,
           "td_onvia": true
         }
       ],
@@ -1298,6 +1298,24 @@
           "group_by": false,
           "label": "Adjusted Value for stock",
           "name": "Adjusted Value for stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
           "show": false
         }
       ],

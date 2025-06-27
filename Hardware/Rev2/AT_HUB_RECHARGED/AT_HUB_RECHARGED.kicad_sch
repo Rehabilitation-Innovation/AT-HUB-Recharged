@@ -3873,12 +3873,12 @@
 		(uuid "4ecdb0aa-9d1a-442e-97e8-be4da4a8688a")
 	)
 	(label "BTN5"
-		(at 191.77 69.85 0)
+		(at 255.27 41.91 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "5440c3e9-3176-4540-b985-01546e9635ff")
 	)
@@ -3973,12 +3973,12 @@
 		(uuid "754bd60f-72cf-4685-bcb3-8975f624906a")
 	)
 	(label "RELAY2"
-		(at 255.27 41.91 180)
+		(at 191.77 69.85 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "7c59e4cc-5b2c-4aeb-bd3e-e5e2474fd5bc")
 	)

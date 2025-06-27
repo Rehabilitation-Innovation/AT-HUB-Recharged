@@ -113,7 +113,7 @@ void setup()
 
 void loop()
 {
-    printBatteryStats();
+    // printBatteryStats();
     delay(100);
 }
 
