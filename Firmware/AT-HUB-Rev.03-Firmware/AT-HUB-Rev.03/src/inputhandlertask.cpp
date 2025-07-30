@@ -47,6 +47,7 @@ BluetoothSerial* serialbt = 0;
 AT_HUB_State_t* global = 0;
 
 void inputhandlerTask(void* pvParameters) {
+    // delay(2000);
     LOG("Starting");
 
     global = (AT_HUB_State_t*)pvParameters;

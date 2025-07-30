@@ -1,0 +1,16 @@
+Revision 2 of Recharged changes:
+
+- Changed the boost IC to TLV61070A 
+- Removed solder jumper for always on (EN to VIN)
+- Removed Battery Cutoff
+- moved switches according to mechanical suggestions from Sophia
+- Did not change alignment of inputs out puts and buttons because its a lot of work and its not symmetrical any ways.
+
+Revision 3:
+
+- Connected FB on boost regulator
+- Changed Green LED Values to 10k from 1k and part numbers
+- Changed Red LED Values to 10k and part numbers
+- Changed FB resistor values and LCSC part numbers
+- Removed Q2; Unneeded
+- Removed PMOS 2 Jumper

@@ -3595,6 +3595,26 @@
 		)
 		(uuid "de746ace-fe7f-470a-a013-7c6abe8b4c67")
 	)
+	(text_box "Fuel Gauge"
+		(exclude_from_sim no)
+		(at 139.7 43.18 0)
+		(size 140.97 60.96)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "08a3b48e-1762-4500-8bdc-df978e064f2a")
+	)
 	(text_box "Device Supports:\n10k NTC beta = 3370\n(SEMITEC 103AT-2 or Mitsubishi TH05-3H103F)"
 		(exclude_from_sim no)
 		(at 62.23 13.97 0)
@@ -3634,6 +3654,26 @@
 			(justify left top)
 		)
 		(uuid "4ff28b21-9c4d-4276-8a19-bfd8221f9ce8")
+	)
+	(text_box "Battery Charger"
+		(exclude_from_sim no)
+		(at 13.97 34.29 0)
+		(size 120.65 55.88)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "69c6e1d6-558a-4387-9588-91a8ccac77b0")
 	)
 	(text_box "Rated for 500mA"
 		(exclude_from_sim no)
@@ -3857,7 +3897,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 60.96) (xy 165.1 60.96)
+			(xy 184.15 63.5) (xy 186.69 63.5)
 		)
 		(stroke
 			(width 0)
@@ -3874,16 +3914,6 @@
 			(type default)
 		)
 		(uuid "07d2d24d-71ea-497a-8ea9-df6227a4531b")
-	)
-	(wire
-		(pts
-			(xy 177.8 86.36) (xy 177.8 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a5164d7-95b3-4300-be7d-aefad3d99808")
 	)
 	(wire
 		(pts
@@ -4037,7 +4067,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 48.26) (xy 165.1 50.8)
+			(xy 186.69 50.8) (xy 186.69 53.34)
 		)
 		(stroke
 			(width 0)
@@ -4137,7 +4167,7 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 39.37) (xy 243.84 41.91)
+			(xy 241.3 46.99) (xy 241.3 49.53)
 		)
 		(stroke
 			(width 0)
@@ -4547,7 +4577,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 58.42) (xy 165.1 60.96)
+			(xy 186.69 60.96) (xy 186.69 63.5)
 		)
 		(stroke
 			(width 0)
@@ -4647,7 +4677,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 60.96) (xy 148.59 60.96)
+			(xy 167.64 63.5) (xy 170.18 63.5)
 		)
 		(stroke
 			(width 0)
@@ -4717,7 +4747,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 60.96) (xy 148.59 58.42)
+			(xy 170.18 63.5) (xy 170.18 60.96)
 		)
 		(stroke
 			(width 0)
@@ -4794,16 +4824,6 @@
 			(type default)
 		)
 		(uuid "9b1a553e-25c4-4f43-9593-9ce2ff83ed33")
-	)
-	(wire
-		(pts
-			(xy 232.41 49.53) (xy 232.41 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d41536c-52aa-4376-84b1-12b43e95b17b")
 	)
 	(wire
 		(pts
@@ -4887,7 +4907,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 49.53) (xy 264.16 54.61)
+			(xy 270.51 59.69) (xy 270.51 64.77)
 		)
 		(stroke
 			(width 0)
@@ -4927,7 +4947,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 48.26) (xy 148.59 50.8)
+			(xy 170.18 50.8) (xy 170.18 53.34)
 		)
 		(stroke
 			(width 0)
@@ -4967,17 +4987,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 39.37) (xy 232.41 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b6c2c5e3-c4f8-4c15-b539-86363b629292")
-	)
-	(wire
-		(pts
-			(xy 243.84 49.53) (xy 243.84 52.07)
+			(xy 241.3 57.15) (xy 241.3 59.69)
 		)
 		(stroke
 			(width 0)
@@ -5047,6 +5057,16 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 74.93) (xy 157.48 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c79e679c-c8b0-45f6-b950-cb26de5cdc13")
+	)
+	(wire
+		(pts
 			(xy 229.87 125.73) (xy 257.81 125.73)
 		)
 		(stroke
@@ -5067,16 +5087,6 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 66.04) (xy 200.66 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce8035af-4096-43fd-b58b-3f2532917530")
-	)
-	(wire
-		(pts
 			(xy 177.8 73.66) (xy 177.8 76.2)
 		)
 		(stroke
@@ -5087,7 +5097,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 39.37) (xy 264.16 41.91)
+			(xy 270.51 49.53) (xy 270.51 52.07)
 		)
 		(stroke
 			(width 0)
@@ -5214,6 +5224,16 @@
 			(type default)
 		)
 		(uuid "e9348aaf-fd9e-420b-ba30-b56881255be4")
+	)
+	(wire
+		(pts
+			(xy 157.48 66.04) (xy 200.66 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e949b017-1846-42a7-ba07-6ac895a4ff30")
 	)
 	(wire
 		(pts
@@ -5387,7 +5407,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 96.52) (xy 177.8 99.06)
+			(xy 157.48 82.55) (xy 157.48 85.09)
 		)
 		(stroke
 			(width 0)
@@ -6261,6 +6281,78 @@
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"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"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
 		)
 	)
@@ -6314,6 +6406,16 @@
 		)
 		(uuid "10ff014c-72b5-4874-a762-49940e1e099a")
 	)
+	(label "VDD_GAUGE"
+		(at 257.81 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "119885ff-22fc-440b-ba02-bfc8edd51134")
+	)
 	(label "TS"
 		(at 92.71 55.88 0)
 		(effects
@@ -6325,7 +6427,7 @@
 		(uuid "1d3a1a1e-1660-4053-9c0c-445dbd281ec1")
 	)
 	(label "BIN"
-		(at 243.84 39.37 180)
+		(at 241.3 46.99 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6333,16 +6435,6 @@
 			(justify right bottom)
 		)
 		(uuid "2d7e54a0-80a9-42cb-bb0c-3e6494466cd3")
-	)
-	(label "VDD_GAUGE"
-		(at 232.41 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3a1489d5-f95e-4ac2-9f60-8005b0c8e7e1")
 	)
 	(label "EN"
 		(at 171.45 138.43 180)
@@ -6414,16 +6506,6 @@
 		)
 		(uuid "860a5c4a-8fe7-4ea0-aeb3-c72f69ab98d4")
 	)
-	(label "BIN"
-		(at 232.41 54.61 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b335e4a1-d22f-4184-a040-7ff9ad2e23e0")
-	)
 	(label "Pack+"
 		(at 186.69 17.78 180)
 		(effects
@@ -6445,7 +6527,7 @@
 		(uuid "dbc728f4-eaec-45c1-a153-430cb58badd2")
 	)
 	(label "GPOUT"
-		(at 264.16 54.61 0)
+		(at 270.51 64.77 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6456,7 +6538,7 @@
 	)
 	(global_label "SCL"
 		(shape input)
-		(at 162.56 60.96 180)
+		(at 184.15 63.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6466,7 +6548,7 @@
 		)
 		(uuid "3c79d0d6-eb72-4d36-a08c-86d460e90e35")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.0067 60.96 0)
+			(at 177.5967 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6522,7 +6604,7 @@
 	)
 	(global_label "SDA"
 		(shape input)
-		(at 146.05 60.96 180)
+		(at 167.64 63.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6532,7 +6614,7 @@
 		)
 		(uuid "ef35a4d4-b78e-4113-9fdb-2739541a2479")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 139.5572 60.96 0)
+			(at 161.1472 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6626,6 +6708,38 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 177.8 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 177.8 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 177.8 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 177.8 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -6804,6 +6918,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 96.52 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 96.52 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 96.52 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 96.52 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8c9753ce-e412-4b40-b4e1-6fdf94ee051b")
 		)
@@ -6821,7 +6967,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 165.1 54.61 0)
+		(at 186.69 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6830,7 +6976,7 @@
 		(fields_autoplaced yes)
 		(uuid "0fcd3ba7-45a4-4149-9528-0076369544c2")
 		(property "Reference" "R16"
-			(at 167.64 53.3399 0)
+			(at 189.23 55.8799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6839,7 +6985,7 @@
 			)
 		)
 		(property "Value" "4k7"
-			(at 167.64 55.8799 0)
+			(at 189.23 58.4199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6848,7 +6994,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 163.322 54.61 90)
+			(at 184.912 57.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6857,7 +7003,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 165.1 54.61 0)
+			(at 186.69 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6866,7 +7012,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 165.1 54.61 0)
+			(at 186.69 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6875,7 +7021,7 @@
 			)
 		)
 		(property "DK#" "4988-NRC10J472TRFCT-ND"
-			(at 165.1 54.61 0)
+			(at 186.69 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6883,7 +7029,7 @@
 			)
 		)
 		(property "LCSC" "C17673"
-			(at 165.1 54.61 0)
+			(at 186.69 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6891,7 +7037,7 @@
 			)
 		)
 		(property "SNAPEDA_PACKAGE_ID" ""
-			(at 165.1 54.61 0)
+			(at 186.69 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6899,7 +7045,39 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
-			(at 165.1 54.61 0)
+			(at 186.69 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 186.69 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 186.69 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 186.69 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 186.69 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7002,6 +7180,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 50.8 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 50.8 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 50.8 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 50.8 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 50.8 59.69 0)
 			(effects
 				(font
@@ -7177,6 +7387,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 21.59 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 21.59 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 21.59 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 21.59 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dbb8bd50-3b09-4c6a-a49b-18458ea92e28")
 		)
@@ -7286,6 +7528,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 163.83 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 163.83 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 163.83 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 163.83 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fd684c24-1bb5-4f3a-ad70-a1a5eae645bd")
 		)
@@ -7388,6 +7662,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 220.98 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 220.98 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 220.98 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 220.98 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "cdfa2858-a508-47a0-9d30-8fde3395083c")
 		)
@@ -7405,7 +7711,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 243.84 45.72 0)
+		(at 241.3 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7414,7 +7720,7 @@
 		(fields_autoplaced yes)
 		(uuid "1b740aef-77ec-4b90-a012-5f533075a95e")
 		(property "Reference" "R19"
-			(at 246.38 44.4499 0)
+			(at 243.84 52.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7423,7 +7729,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 246.38 46.9899 0)
+			(at 243.84 54.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7432,7 +7738,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 242.062 45.72 90)
+			(at 239.522 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7441,7 +7747,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 243.84 45.72 0)
+			(at 241.3 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7450,7 +7756,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 243.84 45.72 0)
+			(at 241.3 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7459,7 +7765,7 @@
 			)
 		)
 		(property "DK#" "RR12P10.0KDCT-ND"
-			(at 243.84 45.72 0)
+			(at 241.3 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7467,7 +7773,7 @@
 			)
 		)
 		(property "LCSC" "C17414"
-			(at 243.84 45.72 0)
+			(at 241.3 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7475,7 +7781,7 @@
 			)
 		)
 		(property "SNAPEDA_PACKAGE_ID" ""
-			(at 243.84 45.72 0)
+			(at 241.3 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7483,7 +7789,39 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
-			(at 243.84 45.72 0)
+			(at 241.3 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 241.3 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 241.3 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 241.3 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 241.3 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7500,107 +7838,6 @@
 			(project "AT_HUB_RECHARGED"
 				(path "/9823f33f-44a9-4d4d-85e0-bb375744fc49/401fe065-fd02-4a48-9e2d-6a80d912a06a"
 					(reference "R19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 232.41 45.72 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "1d3edc43-3a15-4019-9b1b-9158a4ba14c2")
-		(property "Reference" "R28"
-			(at 234.95 44.4499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 234.95 46.9899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 230.632 45.72 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 232.41 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 232.41 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DK#" "RR12P10.0KDCT-ND"
-			(at 232.41 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C17414"
-			(at 232.41 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "SNAPEDA_PACKAGE_ID" ""
-			(at 232.41 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Adjusted Value for stock" ""
-			(at 232.41 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e9120400-e89d-48b6-8ee9-840d44811b5d")
-		)
-		(pin "2"
-			(uuid "846ce969-153f-4eaf-a411-c7e5ea7293df")
-		)
-		(instances
-			(project "AT_HUB_RECHARGED"
-				(path "/9823f33f-44a9-4d4d-85e0-bb375744fc49/401fe065-fd02-4a48-9e2d-6a80d912a06a"
-					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -7667,6 +7904,38 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 60.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 60.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 60.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 60.96 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -7764,6 +8033,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 118.11 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 118.11 119.38 0)
 			(effects
 				(font
@@ -7873,6 +8174,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 80.01 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 80.01 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 80.01 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 80.01 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "36cde626-bde7-4ef6-8a60-b829efa5b6dd")
 		)
@@ -7902,7 +8235,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 243.84 52.07 0)
+		(at 241.3 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7911,7 +8244,7 @@
 		(fields_autoplaced yes)
 		(uuid "48e100df-1fb9-4401-894a-811c3b85fa07")
 		(property "Reference" "#PWR029"
-			(at 243.84 58.42 0)
+			(at 241.3 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7920,7 +8253,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 243.84 57.15 0)
+			(at 241.3 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7928,7 +8261,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 243.84 52.07 0)
+			(at 241.3 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7937,7 +8270,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 243.84 52.07 0)
+			(at 241.3 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7946,7 +8279,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 243.84 52.07 0)
+			(at 241.3 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8038,6 +8371,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 187.96 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 187.96 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 187.96 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 187.96 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 187.96 138.43 0)
 			(effects
 				(font
@@ -8149,6 +8514,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 138.43 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 138.43 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 138.43 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 138.43 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "16a4ad73-b3cb-472f-bc98-ca688b990f01")
 		)
@@ -8243,6 +8640,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 219.71 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 219.71 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 219.71 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 219.71 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5e13e01f-44c6-4944-90b4-e35388f91bed")
 		)
@@ -8326,7 +8755,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 148.59 48.26 0)
+		(at 170.18 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8335,7 +8764,7 @@
 		(fields_autoplaced yes)
 		(uuid "5d9ee9f4-8829-4173-8010-9426054755d0")
 		(property "Reference" "#PWR026"
-			(at 148.59 52.07 0)
+			(at 170.18 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8344,7 +8773,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 148.59 43.18 0)
+			(at 170.18 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8352,7 +8781,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 148.59 48.26 0)
+			(at 170.18 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8361,7 +8790,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 148.59 48.26 0)
+			(at 170.18 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8370,7 +8799,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 148.59 48.26 0)
+			(at 170.18 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8467,6 +8896,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 50.8 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 50.8 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 50.8 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 50.8 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 50.8 175.26 0)
 			(effects
 				(font
@@ -8575,6 +9036,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 220.98 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 220.98 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 220.98 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 220.98 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e1c5b185-1a42-4d2f-bc1e-57caa47e78f8")
 		)
@@ -8592,16 +9085,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 177.8 92.71 0)
+		(at 157.48 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6a9b15ec-700e-423b-a37d-fd7baf6f5971")
 		(property "Reference" "C8"
-			(at 181.61 91.4399 0)
+			(at 161.29 77.4699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8610,7 +9102,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 181.61 93.9799 0)
+			(at 161.29 80.0099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8619,7 +9111,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 178.7652 96.52 0)
+			(at 158.4452 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8628,7 +9120,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 177.8 92.71 0)
+			(at 157.48 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8637,7 +9129,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 177.8 92.71 0)
+			(at 157.48 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8646,23 +9138,25 @@
 			)
 		)
 		(property "DK#" "1276-1066-1-ND"
-			(at 177.8 92.71 0)
+			(at 157.48 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "LCSC" "C377773"
-			(at 177.8 92.71 0)
+			(at 157.48 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "SNAPEDA_PACKAGE_ID" ""
-			(at 177.8 92.71 0)
+			(at 157.48 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8670,7 +9164,40 @@
 			)
 		)
 		(property "Adjusted Value for stock" "2.2u"
-			(at 177.8 92.71 0)
+			(at 162.052 83.312 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 157.48 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 157.48 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 157.48 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 157.48 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8694,7 +9221,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 177.8 99.06 0)
+		(at 157.48 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8703,7 +9230,7 @@
 		(fields_autoplaced yes)
 		(uuid "6b800cda-c32f-4978-8ae6-e4d202216197")
 		(property "Reference" "#PWR042"
-			(at 177.8 105.41 0)
+			(at 157.48 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8712,7 +9239,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 177.8 104.14 0)
+			(at 157.48 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8720,7 +9247,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 99.06 0)
+			(at 157.48 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8729,7 +9256,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 99.06 0)
+			(at 157.48 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8738,7 +9265,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 177.8 99.06 0)
+			(at 157.48 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8843,6 +9370,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 50.8 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 50.8 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 50.8 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 50.8 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "50e46116-6ac7-4e92-bc55-0346d88b98de")
 		)
@@ -8917,6 +9476,38 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 86.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 86.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 86.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 86.36 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -9088,6 +9679,38 @@
 				(hide yes)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 111.76 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 111.76 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 111.76 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 111.76 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "d2be347b-e2af-435a-a931-f995c45c4b4a")
 		)
@@ -9193,6 +9816,38 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 96.52 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 96.52 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 96.52 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 96.52 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "3"
@@ -9307,6 +9962,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 189.23 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 189.23 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 189.23 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 189.23 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0d652763-5b9e-4001-ab18-b26ec1e5dcda")
 		)
@@ -9410,6 +10097,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 257.81 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 257.81 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 257.81 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 257.81 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 257.81 143.51 0)
 			(effects
 				(font
@@ -9566,7 +10285,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 165.1 48.26 0)
+		(at 186.69 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9575,7 +10294,7 @@
 		(fields_autoplaced yes)
 		(uuid "905516f5-994c-4f23-9a83-f456d8751958")
 		(property "Reference" "#PWR027"
-			(at 165.1 52.07 0)
+			(at 186.69 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9584,7 +10303,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 165.1 43.18 0)
+			(at 186.69 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9592,7 +10311,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 165.1 48.26 0)
+			(at 186.69 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9601,7 +10320,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 48.26 0)
+			(at 186.69 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9610,7 +10329,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 165.1 48.26 0)
+			(at 186.69 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9698,7 +10417,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 264.16 39.37 0)
+		(at 270.51 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9707,7 +10426,7 @@
 		(fields_autoplaced yes)
 		(uuid "a062f106-0c1f-477f-959f-ef4605e1672e")
 		(property "Reference" "#PWR028"
-			(at 264.16 43.18 0)
+			(at 270.51 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9716,7 +10435,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 264.16 34.29 0)
+			(at 270.51 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9724,7 +10443,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 264.16 39.37 0)
+			(at 270.51 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9733,7 +10452,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 264.16 39.37 0)
+			(at 270.51 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9742,7 +10461,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 264.16 39.37 0)
+			(at 270.51 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9955,6 +10674,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "LCSC" "C377773"
@@ -9963,6 +10683,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "SNAPEDA_PACKAGE_ID" ""
@@ -9974,6 +10695,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 257.81 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 257.81 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 257.81 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 257.81 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 257.81 74.93 0)
 			(effects
 				(font
@@ -10130,7 +10883,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 264.16 45.72 0)
+		(at 270.51 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10139,7 +10892,7 @@
 		(fields_autoplaced yes)
 		(uuid "b5e1623b-04e6-456f-a1cd-90bca6b0c847")
 		(property "Reference" "R18"
-			(at 266.7 44.4499 0)
+			(at 273.05 54.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10148,7 +10901,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 266.7 46.9899 0)
+			(at 273.05 57.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10157,7 +10910,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 262.382 45.72 90)
+			(at 268.732 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10166,7 +10919,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 264.16 45.72 0)
+			(at 270.51 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10175,7 +10928,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 264.16 45.72 0)
+			(at 270.51 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10184,7 +10937,7 @@
 			)
 		)
 		(property "DK#" "RR12P10.0KDCT-ND"
-			(at 264.16 45.72 0)
+			(at 270.51 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10192,7 +10945,7 @@
 			)
 		)
 		(property "LCSC" "C17414"
-			(at 264.16 45.72 0)
+			(at 270.51 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10200,7 +10953,7 @@
 			)
 		)
 		(property "SNAPEDA_PACKAGE_ID" ""
-			(at 264.16 45.72 0)
+			(at 270.51 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10208,7 +10961,39 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
-			(at 264.16 45.72 0)
+			(at 270.51 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 270.51 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 270.51 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 270.51 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 270.51 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10447,6 +11232,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 229.87 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 229.87 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 229.87 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 229.87 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3388d0f6-86e7-44a8-a815-fff30b2766aa")
 		)
@@ -10556,6 +11373,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 27.94 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 27.94 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 27.94 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 27.94 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "B5"
 			(uuid "7ec03208-d491-49c4-847d-5d17acf75545")
 		)
@@ -10649,6 +11498,38 @@
 				(hide yes)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 215.9 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 215.9 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 215.9 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 215.9 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "11"
 			(uuid "300e74be-c660-43f6-b740-a52a6c8ac95a")
 		)
@@ -10704,7 +11585,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "caebbc8b-befd-45e9-9de2-056f6d22b309")
 		(property "Reference" "R8"
@@ -10782,6 +11663,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 138.43 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 138.43 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 138.43 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 138.43 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "03e35b03-64d6-4f4b-9fdc-3dde1ebb5020")
 		)
@@ -10825,7 +11738,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_6.3x7.7"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A"
 			(at 32.7152 63.5 0)
 			(effects
 				(font
@@ -10878,6 +11791,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 31.75 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 31.75 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 31.75 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 31.75 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 31.75 59.69 0)
 			(effects
 				(font
@@ -10979,6 +11924,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 257.81 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 257.81 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 257.81 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 257.81 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 257.81 133.35 0)
 			(effects
 				(font
@@ -11088,6 +12065,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 107.95 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 107.95 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 107.95 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 107.95 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "905fb91e-962c-4f4b-91fb-be6e27dc8b1b")
 		)
@@ -11105,7 +12114,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 148.59 54.61 0)
+		(at 170.18 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11114,7 +12123,7 @@
 		(fields_autoplaced yes)
 		(uuid "debabc5e-55c6-4549-bf30-5b6cdaaa5a1f")
 		(property "Reference" "R17"
-			(at 151.13 53.3399 0)
+			(at 172.72 55.8799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11123,7 +12132,7 @@
 			)
 		)
 		(property "Value" "4k7"
-			(at 151.13 55.8799 0)
+			(at 172.72 58.4199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11132,7 +12141,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 146.812 54.61 90)
+			(at 168.402 57.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11141,7 +12150,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 148.59 54.61 0)
+			(at 170.18 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11150,7 +12159,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 148.59 54.61 0)
+			(at 170.18 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11159,7 +12168,7 @@
 			)
 		)
 		(property "DK#" "4988-NRC10J472TRFCT-ND"
-			(at 148.59 54.61 0)
+			(at 170.18 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11167,7 +12176,7 @@
 			)
 		)
 		(property "LCSC" "C17673"
-			(at 148.59 54.61 0)
+			(at 170.18 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11175,7 +12184,7 @@
 			)
 		)
 		(property "SNAPEDA_PACKAGE_ID" ""
-			(at 148.59 54.61 0)
+			(at 170.18 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11183,7 +12192,39 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
-			(at 148.59 54.61 0)
+			(at 170.18 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 170.18 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 170.18 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 170.18 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 170.18 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11285,6 +12326,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 154.94 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 154.94 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 154.94 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 154.94 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 154.94 142.24 0)
 			(effects
 				(font
@@ -11461,6 +12534,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 63.5 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 63.5 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 63.5 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 63.5 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a9b038ba-4222-49e9-93f7-8e596772517b")
 		)
@@ -11546,6 +12651,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 118.11 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 118.11 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 118.11 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 118.11 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 118.11 45.72 0)
 			(effects
 				(font
@@ -11647,6 +12784,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 219.71 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 219.71 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 219.71 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 219.71 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7d36375f-ddb8-4f77-81b8-6700c1192fcd")
 		)
@@ -11738,6 +12907,38 @@
 				)
 			)
 		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 92.71 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 92.71 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 92.71 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 92.71 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e32c8d48-1168-4e42-ab11-c2dced1c2a3a")
 		)
@@ -11822,6 +13023,38 @@
 			)
 		)
 		(property "Adjusted Value for stock" ""
+			(at 19.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" ""
+			(at 19.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 19.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SNAPEDA_PN" ""
+			(at 19.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
 			(at 19.05 40.64 0)
 			(effects
 				(font

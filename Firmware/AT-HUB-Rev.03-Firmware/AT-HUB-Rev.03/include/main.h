@@ -9,7 +9,7 @@
 #define BTN2 34
 #define BTN3 35
 #define BTN4 26
-#define BTN5 25
+#define BTN5 37
 
 #define BACKUP_BTN1 32
 #define BACKUP_BTN2 33
@@ -24,7 +24,7 @@
 #define LED5 0
 
 #define RELAY1 19
-#define RELAY2 20
+#define RELAY2 25
 #define RELAY3 7
 #define RELAY4 8
 #define RELAY5 5

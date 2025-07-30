@@ -13,15 +13,15 @@
 #include "blutoothtask.h"
 
 #include "Wire.h"
-
+#include <SparkFunBQ27441.h>
 #include "pins_arduino.h"
 
-#include "BQ27427.h"
+// #include "BQ27427.h"
 
 // Set BATTERY_CAPACITY to the design capacity of your battery.
 const unsigned int BATTERY_CAPACITY = 1000; // e.g. 850mAh battery
 
-BQ27427 lipo(1000U);
+// BQ27427 lipo(1000U);
 
 #if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
 #error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
@@ -38,9 +38,32 @@ AT_HUB_State_t global_state;
 
 void init_hardware();
 
+// void printBatteryStats()
+// {
+//     // Read battery stats from the BQ27427
+//     unsigned int soc = lipo.soc();  // Read state-of-charge (%)
+//     unsigned int volts = lipo.voltage(); // Read battery voltage (mV)
+//     int current = lipo.current(AVG); // Read average current (mA)
+//     unsigned int fullCapacity = lipo.capacity(FULL); // Read full capacity (mAh)
+//     unsigned int capacity = lipo.capacity(REMAIN); // Read remaining capacity (mAh)
+//     int power = lipo.power(); // Read average power draw (mW)
+//     int health = lipo.soh(); // Read state-of-health (%)
+
+//     // Now print out those values:
+//     String toPrint = String(soc) + "% | ";
+//     toPrint += String(volts) + " mV | ";
+//     toPrint += String(current) + " mA | ";
+//     toPrint += String(capacity) + " / ";
+//     toPrint += String(fullCapacity) + " mAh | ";
+//     toPrint += String(power) + " mW | ";
+//     toPrint += String(health) + "%";
+
+//     Serial.println(toPrint);
+// }
+
 void printBatteryStats()
 {
-    // Read battery stats from the BQ27427
+    // Read battery stats from the BQ27441-G1A
     unsigned int soc = lipo.soc();  // Read state-of-charge (%)
     unsigned int volts = lipo.voltage(); // Read battery voltage (mV)
     int current = lipo.current(AVG); // Read average current (mA)
@@ -65,6 +88,24 @@ void setup()
 {
 
     Serial.begin(115200);
+    // Use lipo.begin() to initialize the BQ27441-G1A and confirm that it's
+      // connected and communicating.
+    if (!lipo.begin()) // begin() will return true if communication is successful
+    {
+        // If communication fails, print an error message and loop forever.
+        Serial.println("Error: Unable to communicate with BQ27441.");
+        Serial.println("  Check wiring and try again.");
+        Serial.println("  (Battery must be plugged into Battery Babysitter!)");
+        while (1);
+    }
+    Serial.println("Connected to BQ27441!");
+
+    // Uset lipo.setCapacity(BATTERY_CAPACITY) to set the design capacity
+    // of your battery.
+    lipo.setCapacity(BATTERY_CAPACITY);
+
+
+    // delay(1000);
     // SerialBT.begin("AT-HUB-1"); // Bluetooth device name
     Serial.println("The device started, now you can pair it with bluetooth!");
 
@@ -99,22 +140,22 @@ void setup()
     }
 
 
-    if (!lipo.begin()) // begin() will return true if communication is successful
-    {
-        // If communication fails, print an error message and loop forever.
-        Serial.println("Error: Unable to communicate with BQ27427.");
-        Serial.println("  Check wiring and try again.");
-        Serial.println("  (Battery must be plugged into Battery Babysitter!)");
-        while (1);
-    }
+    // if (!lipo.begin()) // begin() will return true if communication is successful
+    // {
+    //     // If communication fails, print an error message and loop forever.
+    //     Serial.println("Error: Unable to communicate with BQ27427.");
+    //     Serial.println("  Check wiring and try again.");
+    //     Serial.println("  (Battery must be plugged into Battery Babysitter!)");
+    //     while (1);
+    // }
     Serial.println("Connected to BQ27427!");
 
 }
 
 void loop()
 {
-    // printBatteryStats();
-    delay(100);
+    printBatteryStats();
+    delay(1000);
 }
 
 void init_hardware()

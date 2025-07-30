@@ -6,6 +6,7 @@
 #include <freertos/task.h>
 
 #include "main.h"
+#include "SparkFunBQ27441.h"
 
 #define BT_DISCOVER_TIME 10000
 
@@ -100,6 +101,9 @@ void bluetoothTask(void* pvParameters) {
         globalstate->SerialBT.onAuthComplete(onConnect);
         globalstate->SerialBT.register_callback(event_callback);
     }
+
+    int temp_bl_delay = 0;
+
     for (;;) {
         // LOG("Hello From Blutooth");
         // Serial.println(xPortGetCoreID());
@@ -114,6 +118,10 @@ void bluetoothTask(void* pvParameters) {
         // }
         if (NULL != globalstate) {
             globalstate->SerialBT.flush();
+            if ((millis() - temp_bl_delay) >= 5000) {
+                globalstate->SerialBT.printf("BL%d\n", lipo.soc());
+                temp_bl_delay = millis();
+            }
         }
         vTaskDelay(10);
     }
