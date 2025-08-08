@@ -50,6 +50,7 @@ void inputhandlerTask(void* pvParameters) {
     // delay(2000);
     LOG("Starting");
 
+
     global = (AT_HUB_State_t*)pvParameters;
     serialbt = &global->SerialBT;
 
@@ -208,7 +209,7 @@ void inputhandlerTask(void* pvParameters) {
         // toPrint += String(health) + "%";
 
         // Serial.println(toPrint);
-        vTaskDelay(1);
+        vTaskDelay(5);
     }
 }
 
@@ -231,6 +232,13 @@ void checkOutput(OutputStates& output, ButtonStates& input,
 
 void checkButton(ButtonStates& button) {
     button.button_current_value = digitalRead(button.button_pin);
+
+    // brute check to see if the button is considered held but the value is high meaning its not.
+    // Dont really want to mess with below logic, taha and I wrote it and its been a while.
+    if (button.button_held && button.button_current_value) {
+        button.button_held = false;
+    }
+
     if (button.button_current_value == LOW && button.button_last_value == HIGH &&
         (millis() - button.button_debounce_start) > DEBOUNCE_TIME) {
         button.button_debounce_start = millis();

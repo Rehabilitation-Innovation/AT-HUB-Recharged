@@ -96,7 +96,7 @@ void setup()
         Serial.println("Error: Unable to communicate with BQ27441.");
         Serial.println("  Check wiring and try again.");
         Serial.println("  (Battery must be plugged into Battery Babysitter!)");
-        while (1);
+        // while (1);
     }
     Serial.println("Connected to BQ27441!");
 
@@ -154,8 +154,8 @@ void setup()
 
 void loop()
 {
-    printBatteryStats();
-    delay(1000);
+    // printBatteryStats();
+    // delay(1000);
 }
 
 void init_hardware()
