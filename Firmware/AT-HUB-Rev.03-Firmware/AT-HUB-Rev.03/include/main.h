@@ -11,23 +11,23 @@
 #define BTN4 26
 #define BTN5 37
 
-#define BACKUP_BTN1 32
-#define BACKUP_BTN2 33
-#define BACKUP_BTN3 27
-#define BACKUP_BTN4 14
-#define BACKUP_BTN5 12
+#define BACKUP_BTN1  12
+#define BACKUP_BTN2  14
+#define BACKUP_BTN3  27
+#define BACKUP_BTN4  33
+#define BACKUP_BTN5  32
 
-#define LED1 13
-#define LED2 15
-#define LED3 2
-#define LED4 4
-#define LED5 0
+#define LED1  0
+#define LED2  4 
+#define LED3  2
+#define LED4  15 
+#define LED5  13
 
-#define RELAY1 19
-#define RELAY2 25
+#define RELAY1 5
+#define RELAY2 8
 #define RELAY3 7
-#define RELAY4 8
-#define RELAY5 5
+#define RELAY4 25
+#define RELAY5 19
 
 // button state machine.
 typedef enum

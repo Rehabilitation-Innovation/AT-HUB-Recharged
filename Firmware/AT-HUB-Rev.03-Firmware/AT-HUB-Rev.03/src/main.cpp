@@ -61,31 +61,63 @@ void init_hardware();
 //     Serial.println(toPrint);
 // }
 
-void printBatteryStats()
-{
-    // Read battery stats from the BQ27441-G1A
-    unsigned int soc = lipo.soc();  // Read state-of-charge (%)
-    unsigned int volts = lipo.voltage(); // Read battery voltage (mV)
-    int current = lipo.current(AVG); // Read average current (mA)
-    unsigned int fullCapacity = lipo.capacity(FULL); // Read full capacity (mAh)
-    unsigned int capacity = lipo.capacity(REMAIN); // Read remaining capacity (mAh)
-    int power = lipo.power(); // Read average power draw (mW)
-    int health = lipo.soh(); // Read state-of-health (%)
+// void printBatteryStats()
+// {
+//     // Read battery stats from the BQ27441-G1A
+//     unsigned int soc = lipo.soc();  // Read state-of-charge (%)
+//     unsigned int volts = lipo.voltage(); // Read battery voltage (mV)
+//     int current = lipo.current(AVG); // Read average current (mA)
+//     unsigned int fullCapacity = lipo.capacity(FULL); // Read full capacity (mAh)
+//     unsigned int capacity = lipo.capacity(REMAIN); // Read remaining capacity (mAh)
+//     int power = lipo.power(); // Read average power draw (mW)
+//     int health = lipo.soh(); // Read state-of-health (%)
 
-    // Now print out those values:
-    String toPrint = String(soc) + "% | ";
-    toPrint += String(volts) + " mV | ";
-    toPrint += String(current) + " mA | ";
-    toPrint += String(capacity) + " / ";
-    toPrint += String(fullCapacity) + " mAh | ";
-    toPrint += String(power) + " mW | ";
-    toPrint += String(health) + "%";
+//     // Now print out those values:
+//     String toPrint = String(soc) + "% | ";
+//     toPrint += String(volts) + " mV | ";
+//     toPrint += String(current) + " mA | ";
+//     toPrint += String(capacity) + " / ";
+//     toPrint += String(fullCapacity) + " mAh | ";
+//     toPrint += String(power) + " mW | ";
+//     toPrint += String(health) + "%";
 
-    Serial.println(toPrint);
-}
+//     Serial.println(toPrint);
+// }
 
 void setup()
 {
+
+    digitalWrite(RELAY1, LOW);
+    digitalWrite(RELAY2, LOW);
+    digitalWrite(RELAY3, LOW);
+    digitalWrite(RELAY4, LOW);
+    digitalWrite(RELAY5, LOW);
+    digitalWrite(LED1, LOW);
+    digitalWrite(LED2, LOW);
+    digitalWrite(LED3, LOW);
+    digitalWrite(LED4, LOW);
+    digitalWrite(LED5, LOW);
+
+    pinMode(RELAY1, OUTPUT);
+    pinMode(RELAY2, OUTPUT);
+    pinMode(RELAY3, OUTPUT);
+    pinMode(RELAY4, OUTPUT);
+    pinMode(RELAY5, OUTPUT);
+    pinMode(LED1, OUTPUT);
+    pinMode(LED2, OUTPUT);
+    pinMode(LED3, OUTPUT);
+    pinMode(LED4, OUTPUT);
+    pinMode(LED5, OUTPUT);
+    pinMode(BTN1, INPUT_PULLUP);
+    pinMode(BTN2, INPUT_PULLUP);
+    pinMode(BTN3, INPUT_PULLUP);
+    pinMode(BTN4, INPUT_PULLUP);
+    pinMode(BTN5, INPUT_PULLUP);
+    pinMode(BACKUP_BTN1, INPUT_PULLUP);
+    pinMode(BACKUP_BTN2, INPUT_PULLUP);
+    pinMode(BACKUP_BTN3, INPUT_PULLUP);
+    pinMode(BACKUP_BTN4, INPUT_PULLUP);
+    pinMode(BACKUP_BTN5, INPUT_PULLUP);
 
     Serial.begin(115200);
     // Use lipo.begin() to initialize the BQ27441-G1A and confirm that it's

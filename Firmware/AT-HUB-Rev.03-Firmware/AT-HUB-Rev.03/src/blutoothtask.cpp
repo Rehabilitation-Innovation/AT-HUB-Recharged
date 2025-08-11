@@ -38,39 +38,64 @@ void event_callback(esp_spp_cb_event_t event, esp_spp_cb_param_t* param) {
     }
 }
 
+void printBatteryStats()
+{
+    // Read battery stats from the BQ27427
+    unsigned int soc = lipo.soc();  // Read state-of-charge (%)
+    unsigned int volts = lipo.voltage(); // Read battery voltage (mV)
+    int current = lipo.current(AVG); // Read average current (mA)
+    unsigned int fullCapacity = lipo.capacity(FULL); // Read full capacity (mAh)
+    unsigned int capacity = lipo.capacity(REMAIN); // Read remaining capacity (mAh)
+    int power = lipo.power(); // Read average power draw (mW)
+    int health = lipo.soh(); // Read state-of-health (%)
+
+    // Now print out those values:
+    String toPrint = String(soc) + "% | ";
+    toPrint += String(volts) + " mV | ";
+    toPrint += String(current) + " mA | ";
+    toPrint += String(capacity) + " / ";
+    toPrint += String(fullCapacity) + " mAh | ";
+    toPrint += String(power) + " mW | ";
+    toPrint += String(health) + "%";
+
+    Serial.println(toPrint);
+}
+
 void bluetoothTask(void* pvParameters) {
     globalstate = (AT_HUB_State_t*)pvParameters;
 
     LOG("Starting Blutoothhandler:");
 
-    globalstate->SerialBT.begin("AT-HUB-3");
+    globalstate->SerialBT.begin("AT-HUB-1");
 
-    if (globalstate->btScanAsync) {
-        Serial.print("Starting asynchronous discovery... ");
-        if (globalstate->SerialBT.discoverAsync(btAdvertisedDeviceFound)) {
-            Serial.println(
-                "Findings will be reported in \"btAdvertisedDeviceFound\"");
-            vTaskDelay(1000);
-            Serial.print("Stopping discoverAsync... ");
-            globalstate->SerialBT.discoverAsyncStop();
-            Serial.println("stopped");
-        }
-        else {
-            Serial.println(
-                "Error on discoverAsync f.e. not working after a \"connect\"");
-        }
-    }
+    // if (globalstate->btScanAsync) {
+    //     Serial.print("Starting asynchronous discovery... ");
+    //     if (globalstate->SerialBT.discoverAsync(btAdvertisedDeviceFound)) {
+    //         Serial.println(
+    //             "Findings will be reported in \"btAdvertisedDeviceFound\"");
+    //         vTaskDelay(1000);
+    //         Serial.print("Stopping discoverAsync... ");
+    //         globalstate->SerialBT.discoverAsyncStop();
+    //         Serial.println("stopped");
+    //     }
+    //     else {
+    //         Serial.println(
+    //             "Error on discoverAsync f.e. not working after a \"connect\"");
+    //     }
+    // }
 
-    if (globalstate->btScanSync) {
-        Serial.println("Starting synchronous discovery... ");
-        BTScanResults* pResults = globalstate->SerialBT.discover(BT_DISCOVER_TIME);
-        if (pResults) {
-            pResults->dump(&Serial);
-        }
-        else {
-            Serial.println("Error on BT Scan, no result!");
-        }
-    }
+    // if (globalstate->btScanSync) {
+    //     Serial.println("Starting synchronous discovery... ");
+    //     BTScanResults* pResults = globalstate->SerialBT.discover(BT_DISCOVER_TIME);
+    //     if (pResults) {
+    //         pResults->dump(&Serial);
+    //     }
+    //     else {
+    //         Serial.println("Error on BT Scan, no result!");
+    //     }
+    // }
+
+    delay(500);
 
     digitalWrite(LED1, HIGH);
     digitalWrite(LED2, HIGH);
@@ -118,9 +143,10 @@ void bluetoothTask(void* pvParameters) {
         // }
         if (NULL != globalstate) {
             globalstate->SerialBT.flush();
-            if ((millis() - temp_bl_delay) >= 5000) {
+            if ((millis() - temp_bl_delay) >= 10000) {
                 globalstate->SerialBT.printf("BL%d\n", lipo.soc());
                 temp_bl_delay = millis();
+                printBatteryStats();
             }
         }
         vTaskDelay(10);

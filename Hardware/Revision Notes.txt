@@ -14,3 +14,4 @@ Revision 3:
 - Changed FB resistor values and LCSC part numbers
 - Removed Q2; Unneeded
 - Removed PMOS 2 Jumper
+- Added pullup to IO32 because of it being a XTAL RTC P pin. see Confluence for more details.
